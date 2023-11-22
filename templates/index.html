@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+</head>
+<body class="bg-gray-100 p-8">
+
+<div class="max-w-md mx-auto bg-white p-8 border rounded shadow">
+
+    <h2 class="text-2xl font-semibold mb-6">Contact Us</h2>
+
+    <form action="{{ url_for('submit') }}" method="post">
+
+        <div class="mb-4">
+            <label for="name" class="block text-gray-700 font-medium">Name</label>
+            <input type="text" id="name" name="name" class="form-input mt-1 block w-full" required>
+        </div>
+
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700 font-medium">Email</label>
+            <input type="email" id="email" name="email" class="form-input mt-1 block w-full" required>
+        </div>
+
+        <div class="mb-6">
+            <label for="message" class="block text-gray-700 font-medium">Message</label>
+            <textarea id="message" name="message" rows="4" class="form-input mt-1 block w-full" required></textarea>
+        </div>
+
+        <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue active:bg-blue-800">
+            Submit
+        </button>
+
+    </form>
+</div>
+
+</body>
+</html>
